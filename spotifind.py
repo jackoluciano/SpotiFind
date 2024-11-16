@@ -25,6 +25,7 @@ def getartistid(artist_name):
     
     if response_artist.status_code==200:
         data = response_artist.json()
+        print("")
         print(f"Name: {data['artists'][0]['name']}")
         print("Genres: ", end="")
         for i in range(len(data['artists'][0]['genres'])):
@@ -63,6 +64,7 @@ def getalbumid(album_name):
 
     if response_album.status_code == 200:
         data_album = response_album.json()
+        print("")
         print(f"Album name: {data_album['albums'][0]['name']}")
         print(f"Artist name: {data_album['albums'][0]['artists'][0]['name']}")
         print(f"Label: {data_album['albums'][0]['label']}")
@@ -95,6 +97,7 @@ def gettrackid(track_name):
 
     if response_track.status_code ==200:
         data_track = response_track.json()
+        print("")
         print(f"Track name: {data_track['tracks'][0]['name']}")
         print("Artists: ", end="")
         for i in range(len(data_track['tracks'][0]['artists'])):
@@ -121,6 +124,7 @@ def getlyricsid(track_name2):
 
     if response_track_lyric.status_code==200:
         data_lyric= response_track_lyric.json()
+        print("")
         print('LYRICS')
         for i in range(len(data_lyric['lyrics']['lines'])):
             print(data_lyric['lyrics']['lines'][i]['words'])
@@ -141,6 +145,7 @@ def getrecommendation(track_name3):
 
     if response_recommendation.status_code==200:
         datarecommendation= response_recommendation.json()
+        print("")
         print("TRACK RECOMMENDATION")
         for i in range(len(datarecommendation['tracks'])):
             print(f"{datarecommendation['tracks'][i]['name']} by ", end="")
@@ -153,6 +158,7 @@ def getrecommendation(track_name3):
 # choose menu
 
 while True:
+    print("")
     print("1. Artist Overview")
     print("2. Album Overview")
     print("3. Track Overview")
@@ -163,16 +169,16 @@ while True:
     if user_input=='1':
         artist= input("input artist name: ")
         getartistid(artist)
-    if user_input=='2':
+    elif user_input=='2':
         album= input("input album name: ")
         getalbumid(album)
-    if user_input=='3':
+    elif user_input=='3':
         track= input("input track name: ")
         gettrackid(track)
-    if user_input=='4':
+    elif user_input=='4':
         lyric= input("input track name: ")
         getlyricsid(lyric)
-    if user_input=='5':
+    elif user_input=='5':
         recommendation= input("input track name: ")
         getrecommendation(recommendation)
     else:
