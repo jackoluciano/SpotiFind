@@ -159,20 +159,20 @@ while True:
     print("4. Track Lyrics")
     print("5. Track Recommendation")
 
-    user_input= int(input("Choose 1-5: "))
-    if user_input==1:
+    user_input= input("Choose 1-5: ")
+    if user_input=='1':
         artist= input("input artist name: ")
         getartistid(artist)
-    if user_input==2:
+    if user_input=='2':
         album= input("input album name: ")
         getalbumid(album)
-    if user_input==3:
+    if user_input=='3':
         track= input("input track name: ")
         gettrackid(track)
-    if user_input==4:
+    if user_input=='4':
         lyric= input("input track name: ")
         getlyricsid(lyric)
-    if user_input==5:
+    if user_input=='5':
         recommendation= input("input track name: ")
         getrecommendation(recommendation)
     else:
