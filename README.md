@@ -4,4 +4,4 @@ Ini proyek sederhana yang melibatkan request api melalui media rapidapi dan meto
 
 Adapun untuk menginstall library requests, dijalankan perintah berikut pada command prompt: ` pip install requests `
 
-Have fun! ( ๑ ˃̵ᴗ˂̵)و ♡
+Have fun! ( ๑ ˃ᴗ˂)و ♡
